@@ -43,9 +43,11 @@ The models were trained using an adam optimizer with a learning rate of 0.001 an
 
 ### 5. Results
 Below show the accuracy and loss per epoch as well as the classification table and confusion matrix after running ResNet50V2 for 30 epochs. This took almost around a day to train. 
+
 ![Accuracy and Loss](images/accloss.jpg)
 ![Classification Table](images/class.jpg)
 ![Confusion Matrix](images/conf.jpg)
+
 The model reached over 99% accuracy after the 12th epoch but kept running even though I had an early stopping function. Since the minimum change or min_delta was set to 0, there may have been minute improvements in accuracy.
 
 ## Integrating the Model to Web-Application
