@@ -13,19 +13,35 @@ The Dataset I used was from [Kaggle](https://www.kaggle.com/datasets/omkargurav/
 ![Class Distribution](images/classes.png)
 
 ### 2. Model and Methodology Proposed
-In order to classify objects in images, Convolutional Neural Networks (CNN) are most commonly used. Insead of creating one from scratch, I decided to use transfer learning with pre-trained models and fine-tune the final layers to fit my classification needs. Transfer learning is a machine learning technique that involves using knowledge gained from a previous task with a large dataset that is incorporated into a similar task in order to improve the performance of the new task as the model utilizes the previously learned information. To train a model to classify a picture with a person wearning a mask or not, several pre-trained models that had already been trained on large image-based datasets were used. The pre-trained models were then respectively fine-tuned the masked dataset. By using a pre-trained model as a starting point, transfer learning significantly reduced the amount of data and time required to train a new model while increasing the accuracy. It also allows for testing  multiple models and variables to efficiently find which model best suits our task. Since the models are already trained on image datasets of over a million images each, they can easily detect edges and features in the images while the additional layers add
 
-By leveraging pre-trained models such as ResNet50 and MobileNetV2, the model can easily identify edges in images and learn specific layers to identify shapes and other features that are important for classifying malignant or benign moles. 
+In order to classify objects in images, Convolutional Neural Networks (CNN) are most commonly used. Insead of creating one from scratch, I decided to use transfer learning with pre-trained models and fine-tune the final layers to fit my classification needs. Transfer learning is a machine learning technique that involves using knowledge gained from a previous task with a large dataset that is incorporated into a similar task in order to improve the performance of the new task as the model utilizes the previously learned information. By using a pre-trained model as a starting point, transfer learning significantly reduced the amount of data and time required to train a new model while increasing the accuracy. It also allows for testing  multiple models and variables to efficiently find which model best suits our task. Since the models are already trained on image datasets of over a million images each, they can easily detect edges and features in the images while the additional layers and training will allow it adhere to the specific task of mask detection on a person's face.
 
-
-
-
+I decided to test the models ResNet50V2, MobileNetV2, and InceptionResNetV2 from the tensor flow keras library. 
 
 ### 3. Image Preprocessing
 
-I used Keras' ImageDataGenerator class perform Image augmentation and flow_from_dataframe for further preprocessing. 
+I used Keras' ImageDataGenerator class perform Image augmentation and flow_from_dataframe for further preprocessing. Image augmentation is used to prevent overfitting in models, especially with smaller datasets. It creates a lot more varaition in the data and exposes the models to many images that were not int he original dataset.
 
+Hyper parameters:
+- Normalization by dividing all pixel values by 255
+- Rotation range of 20 degrees
+- Vertical/Horizontal shift of 20%
+- Slant of 20 degrees
+- Allowing for horizontal flip
+
+All images were also resized to 224 by 224 before using them to train the model.
+ 
 ### 4. Training
+
+The final layers I added to fine tune these models included:
+- Flatten layer
+- Dense layer with 1024 Neurons and reli activation function
+- Dropout layer with rate of 0.5
+- Dense output layer with sigmoid activation function
+
+The models were trained using an adam optimizer with a learning rate of 0.001 and binary_crossentropy loss function. I tested them all initially after running a couple epochs but ended up choosing ResNet50V2 to run for 30 epochs.
+
 ### 5. Results
 
-
+![Accuracy](images/accuracy.png)
+![Loss](images/accuracy.png)
