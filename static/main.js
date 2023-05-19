@@ -12,3 +12,9 @@ $(document).ready(function() {
       });
     });
  });
+
+ $(document).ready(function() {
+  $('#submit').click(function(){
+     alert("Face Encoded!");
+  });
+});

@@ -109,3 +109,8 @@ input[type=submit] {
     margin-top:10px;
     
 }
+
+input[type=submit]:hover {
+    background:#333;
+    color:white;
+}
