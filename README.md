@@ -43,5 +43,6 @@ The models were trained using an adam optimizer with a learning rate of 0.001 an
 
 ### 5. Results
 
-![Accuracy](images/accloss.jpg)
+[Accuracy and Loss](images/accloss.jpg)
+![Loss](images/class.jpg)
 ![Loss](images/class.jpg)
