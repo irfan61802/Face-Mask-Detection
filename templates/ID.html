@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Face Detector </title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/static/main.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <ul class="topnav">
+        <li><a href="/">Mask Detection</a></li>
+        <li><a href="/faceID">Face Identification</a></li>
+        <li><a href="/maskID">Both(Beta)</a></li>
+      </ul>
+    </nav>
+    
+    <h1>Face Identification</h1>
+
+    <div class = "videocontainer">
+      <div class="videostream"><img id="video_feed" src="{{url_for('video_feed3')}}" width="100%"></div>
+
+      <div class="register">
+        <h2 class="reg-title">Register Face</h2>
+      
+        <form id="get_name">
+          <label for="fname"> First name:  <input type="text" id="fname" name="fname"> </label> <br>
+          <label for="lname"> Last name: <input type="text" id="lname" name="lname"> </label> <br>
+          <input type="submit" id ="submit">
+        </form>
+        <div id='result'></div>
+
+    </div>
+
+    </div>
+
+    
+  </body>
+
+</html>

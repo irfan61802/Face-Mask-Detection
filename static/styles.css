@@ -1,0 +1,111 @@
+
+body {
+    color: rgb(0, 0, 0);
+    background-color: #e4e1ff;
+}
+
+body h1{
+    text-align: center  ;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    border-radius: 50px;
+    filter: drop-shadow(0px 0px 10px rgb(0,0,0,1));
+}
+
+.topnav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    text-align: center;
+}
+  
+.topnav li {
+    list-style: none;
+    display: inline-block;
+}
+  
+.topnav a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 14px 16px;
+}
+
+.topnav a:hover {
+    border-radius: 20px;
+    color: black;
+}
+
+.videocontainer{
+    text-align: center;
+   
+}
+
+.videostream{
+
+    border: 5px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    width:1000px;
+    position: relative;
+    display:inline-block;
+    display: inline-block;
+    vertical-align: top;
+  
+}
+
+.videostream #video_feed{
+    vertical-align: middle;
+}
+
+
+.register{
+    display: inline-block;
+    vertical-align: top;
+    margin:5%;
+    text-align: center;
+}
+
+h2{
+    margin-bottom:15%;
+    text-align: left;
+}
+
+label {
+    
+    display: flex;
+}
+
+
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+input[type=text]:hover {
+    border-color:#333;
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    margin-top:10px;
+    
+}

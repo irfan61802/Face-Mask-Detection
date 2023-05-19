@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <title>Face Detector </title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css"> 
+  </head>
+
+  <body>
+
+    <nav>
+      <ul class="topnav">
+        <li><a href="/">Mask Detection</a></li>
+        <li><a href="/faceID">Face Identification</a></li>
+        <li><a href="/maskID">Both(Beta)</a></li>
+      </ul>
+    </nav>
+
+    <h1>Face Mask Detector</h1>
+
+    <div class = "videocontainer">
+      <div class="videostream"><img id="video_feed" src="{{url_for('video_feed')}}"></div>
+    </div>
+    
+  </body>
+
+</html>
