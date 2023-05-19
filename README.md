@@ -39,10 +39,14 @@ The final layers I added to fine tune these models included:
 - Dropout layer with rate of 0.5
 - Dense output layer with sigmoid activation function
 
-The models were trained using an adam optimizer with a learning rate of 0.001 and binary_crossentropy loss function. I tested them all initially after running a couple epochs but ended up choosing ResNet50V2 to run for 30 epochs.
+The models were trained using an adam optimizer with a learning rate of 0.001 and binary_crossentropy loss function. I tested them all initially after running a couple epochs each but ended up choosing ResNet50V2 to run for 30 epochs for efficiency and accuracy. 
 
 ### 5. Results
+Below show the accuracy and loss per epoch as well as the classification table and confusion matrix after running ResNet50V2 for 30 epochs. This took almost around a day to train. 
+![Accuracy and Loss](images/accloss.jpg)
+![Classification Table](images/class.jpg)
+![Confusion Matrix](images/conf.jpg)
+The model reached over 99% accuracy after the 12th epoch but kept running even though I had an early stopping function. Since the minimum change or min_delta was set to 0, there may have been minute improvements in accuracy.
 
-[Accuracy and Loss](images/accloss.jpg)
-![Loss](images/class.jpg)
-![Loss](images/class.jpg)
+## Integrating the Model to Web-Application
+
