@@ -10,7 +10,7 @@ I decided to create a web application using computer vision and machine learning
 ### 1. Dataset
 The Dataset I used was from [Kaggle](https://www.kaggle.com/datasets/omkargurav/face-mask-dataset) which consisted of 7553 RGB images. It cosisted of 3725 images with masks and 3828 images without masks resulting in the classes being quite balanced. 
 
-![Class Distribution](images/classes.png)
+![Class Distribution](images/classes.jpg)
 
 ### 2. Model and Methodology Proposed
 
@@ -43,5 +43,5 @@ The models were trained using an adam optimizer with a learning rate of 0.001 an
 
 ### 5. Results
 
-![Accuracy](images/accuracy.png)
-![Loss](images/accuracy.png)
+![Accuracy](images/acc.jpg)
+![Loss](images/loss.jpg)
