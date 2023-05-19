@@ -9,7 +9,7 @@ I decided to create a web application using computer vision and machine learning
 
 ### 1. Dataset
 The Dataset I used was from [Kaggle](https://www.kaggle.com/datasets/omkargurav/face-mask-dataset) which consisted of 7553 RGB images. It cosisted of 3725 images with masks and 3828 images without masks resulting in the classes being quite balanced. 
-[Class Distribution](images/classes)
+[Class Distribution](images/classes.png)
 
 ### 2. Image Preprocessing
 
