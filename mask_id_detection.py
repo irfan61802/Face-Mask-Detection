@@ -13,7 +13,7 @@ global face_names
 face_names=[]
 
 # connect to database
-uri = "mongodb+srv://irfan61802:zDZQo0yAcnvUqBhC@face-db.92meset.mongodb.net/?retryWrites=true&w=majority"
+uri = "mongodb+srv://irfan61802:<PASSWORD HERE>@face-db.92meset.mongodb.net/?retryWrites=true&w=majority"
 client = MongoClient(uri, server_api=ServerApi('1'))
 db = client['face']
 faces=db.face
