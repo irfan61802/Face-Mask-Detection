@@ -5,6 +5,15 @@ This project was inspired by three of my classes for my final semester. I did my
 
 I decided to create a web application using computer vision and machine learning that is able to detect whether people are wearing masks in real time. I also added the ability the recognize the faces that are registered in the database. 
 
-## Training the Model
+## Training the Mask Detector Model
+
+### 1. Dataset
+The Dataset I used was from [Kaggle](https://www.kaggle.com/datasets/omkargurav/face-mask-dataset) which consisted of 7553 RGB images. It cosisted of 3725 images with masks and 3828 images without masks resulting in the classes being quite balanced. 
+[Class Distribution](images/classes)
+
+### 2. Image Preprocessing
+
+### 3. Training
+### 4. Results
 
 
