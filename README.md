@@ -14,13 +14,13 @@ The Dataset I used was from [Kaggle](https://www.kaggle.com/datasets/omkargurav/
 
 ### 2. Model and Methodology Proposed
 
-In order to classify objects in images, Convolutional Neural Networks (CNN) are most commonly used. Instead of creating one from scratch, I decided to use transfer learning with pre-trained models and fine-tune the final layers to fit my classification needs. Transfer learning is a machine learning technique that involves using knowledge gained from a previous task with a large dataset that is incorporated into a similar task in order to improve the performance of the new task as the model utilizes the previously learned information. By using a pre-trained model as a starting point, transfer learning significantly reduced the amount of data and time required to train a new model while increasing the accuracy. It also allows for testing multiple models and variables to efficiently find which model best suits our task. Since the models are already trained on image datasets of over a million images each, they can easily detect edges and features in the images while the additional layers and training will allow it adhere to the specific task of mask detection on a person's face.
+In order to classify objects in images, Convolutional Neural Networks (CNN) are most commonly used. Instead of creating one from scratch, I decided to use transfer learning with pre-trained models and fine-tune the final layers to fit my classification needs. Transfer learning is a machine learning technique that involves using knowledge gained from a previous task with a large dataset that is incorporated into a similar task in order to improve the performance of the new task as the model utilizes the previously learned information. By using a pre-trained model as a starting point, transfer learning significantly reduced the amount of data and time required to train a new model while increasing the accuracy. It also allows for testing multiple models and variables to efficiently find which model best suits our task. Since the models are already trained on image datasets of over a million images each, they can easily detect edges and features in the images while the additional layers and training will allow it to adhere to the specific task of mask detection on a person's face.
 
 I decided to test the models ResNet50V2, MobileNetV2, and InceptionResNetV2 from the tensor flow keras library. 
 
 ### 3. Image Preprocessing
 
-I used Keras' ImageDataGenerator class to perform Image augmentation and flow_from_dataframe for further preprocessing. Image augmentation is used to prevent overfitting in models, especially with smaller datasets. It creates a lot more varaition in the data and exposes the models to many images that were not int he original dataset.
+I used Keras' ImageDataGenerator class to perform Image augmentation and flow_from_dataframe for further preprocessing. Image augmentation is used to prevent overfitting in models, especially with smaller datasets. It creates a lot more variation in the data and exposes the models to many images that were not in the original dataset.
 
 Hyperparameters:
 - Normalization by dividing all pixel values by 255
@@ -33,7 +33,7 @@ All images were also resized to 224 by 224 before using them to train the model.
  
 ### 4. Training
 
-The final layers I added to fine tune these models included:
+The final layers I added to fine-tune these models included:
 - Flatten layer
 - Dense layer with 1024 Neurons and reli activation function
 - Dropout layer with a rate of 0.5
